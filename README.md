@@ -36,3 +36,4 @@ A reference application for a FastAPI instance.
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Docker](https://www.docker.com/)
 - [Testcontainers Python](https://testcontainers-python.readthedocs.io/en/latest/)
+- [Testcontainers with FastAPI](https://lricardo.space/posts/seamless-containerized-tests-python/)

@@ -28,18 +28,22 @@ def setup(c):
     run_tests(c)
 
 @task(aliases=['b'])
-def build_image(c, tag="latest"):
+def build_image(c, name="fastapi-reference", tag="latest"):
     """Build the Docker image."""
-    c.run(f"docker build -t fastapi-reference:{tag} .")
+    c.run(f"docker build -t {name}:{tag} .")
+
+@task(aliases=['r'])
+def run_image(c, name="fastapi-reference", tag="latest"):
+    """Run the Docker image."""
+    c.run(f"docker run -p 8000:8000 {name}:{tag}")
 
 @task(aliases=['p'])
-def push_image(c, tag="latest"):
+def push_image(c, name="fastapi-reference", tag="latest"):
     """Push the Docker image to the container registry."""
-    c.run(f"docker push fastapi-reference:{tag}")
+    c.run(f"docker push {name}:{tag}")
 
 @task(aliases=['d'])
 def deploy(c):
     """Deploy the application to Kubernetes."""
     c.run("kubectl apply -f k8s/deployment.yaml")
     c.run("kubectl apply -f k8s/service.yaml")
-    
