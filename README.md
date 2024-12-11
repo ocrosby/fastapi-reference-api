@@ -29,3 +29,10 @@ invoke deploy
 ```
 
 A reference application for a FastAPI instance.
+
+
+## References
+
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Docker](https://www.docker.com/)
+- [Testcontainers Python](https://testcontainers-python.readthedocs.io/en/latest/)
