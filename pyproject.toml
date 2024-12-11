@@ -24,6 +24,7 @@ dev = [
     "ruff",
     "pytest",
     "pytest-cov",
+    "pytest-bdd",
 ]
 
 [tool.black]
