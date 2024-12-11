@@ -25,6 +25,7 @@ dev = [
     "pytest",
     "pytest-cov",
     "pytest-bdd",
+    "testcontainers"
 ]
 
 [tool.black]
