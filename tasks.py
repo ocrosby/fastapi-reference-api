@@ -30,12 +30,12 @@ def setup(c):
 @task(aliases=['b'])
 def build_image(c, tag="latest"):
     """Build the Docker image."""
-    c.run(f"docker build -t your-docker-image:{tag} .")
+    c.run(f"docker build -t fastapi-reference:{tag} .")
 
 @task(aliases=['p'])
 def push_image(c, tag="latest"):
     """Push the Docker image to the container registry."""
-    c.run(f"docker push your-docker-image:{tag}")
+    c.run(f"docker push fastapi-reference:{tag}")
 
 @task(aliases=['d'])
 def deploy(c):
