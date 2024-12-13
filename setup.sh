@@ -2,3 +2,5 @@
 
 pip install --upgrade pip
 pip install invoke
+
+invoke install
