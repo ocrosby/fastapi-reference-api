@@ -13,14 +13,15 @@ dependencies = [
     "fastapi",
     "uvicorn[standard]",
     "pydantic",
-    "sqlalchemy",
     "databases",
     "alembic",
-    "httpx"
+    "httpx",
+    "sqlmodel"
 ]
 
 [project.optional-dependencies]
 dev = [
+    "uv",
     "ruff",
     "pytest",
     "pytest-cov",
